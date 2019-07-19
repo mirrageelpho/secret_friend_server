@@ -21,5 +21,5 @@ app.use(cors({origin: function(origin, callback){
 
 
 app.use(require('./src/routes'))
-const port = process.env.SERVER_PORT
+const port = process.env.PORT || process.env.SERVER_PORT
 app.listen(port, ()=>console.log(`Server listen on: ${port}`));
